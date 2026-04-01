@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36">
   <diagram id="O58Q4ypXDejSoE3ytvxG" name="Página-1">
-    <mxGraphModel dx="2113" dy="1342" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6048" dy="3508" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -376,9 +376,6 @@
         </mxCell>
         <mxCell id="Dt9PvAlFMwub7Y18UGSE-154" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=38;" value="flujo de requests autenticadas" vertex="1">
           <mxGeometry height="30" width="1034" x="-267" y="1984" as="geometry" />
-        </mxCell>
-        <mxCell id="Dt9PvAlFMwub7Y18UGSE-173" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;div&gt;Observación 1&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;La fuente de verdad de autenticación es localStorage.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Observación 2&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;La lógica está distribuida entre:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;auth-form.tsx&lt;/div&gt;&lt;div&gt;auth.service.ts&lt;/div&gt;&lt;div&gt;api-client.ts&lt;/div&gt;&lt;div&gt;private-layout.tsx&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Observación 3&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PrivateLayout no protege el acceso a rutas privadas.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Observación 4&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AuthLayout no redirige a usuarios ya autenticados.&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="401" width="418" x="1983" y="1511" as="geometry" />
         </mxCell>
         <mxCell id="Dt9PvAlFMwub7Y18UGSE-174" parent="1" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=0;startSize=20;horizontalStack=0;whiteSpace=wrap;" value="Pool" vertex="1">
           <mxGeometry height="808.5" width="2335" x="-197" y="3410" as="geometry" />
