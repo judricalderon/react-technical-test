@@ -2,6 +2,7 @@ import type { UseMutationResult, UseQueryResult } from '@tanstack/react-query'
 import { useMutation, useQuery } from '@tanstack/react-query'
 
 import apiClient from '@/lib/api-client'
+import useAuthStore from '@/stores/auth.store'
 import type {
   AuthUser,
   LoginRequest,
@@ -27,7 +28,7 @@ const useGetMe = (): UseQueryResult<AuthUser> => {
       const response = await apiClient.get<AuthUser>('/auth/me')
       return response.data
     },
-    enabled: !!localStorage.getItem('access_token'),
+    enabled: !!useAuthStore.getState().accessToken,
     retry: false,
   })
 }
