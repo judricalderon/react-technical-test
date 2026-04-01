@@ -1,16 +1,20 @@
 import { HiOutlineLogout, HiOutlineUser } from 'react-icons/hi'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Navigate, Outlet, useNavigate } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
+import useAuthStore from '@/stores/auth.store'
 
 const PrivateLayout = () => {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated)
   const navigate = useNavigate()
-
+  const logout = useAuthStore((state) => state.logout)
   const handleLogout = () => {
-    localStorage.removeItem('access_token')
+    logout()
     void navigate('/auth')
   }
-
+  if (!isAuthenticated) {
+    return <Navigate to="/auth" replace />
+  }
   return (
     <div className="bg-background min-h-screen">
       <header className="border-border bg-card sticky top-0 z-10 border-b">
