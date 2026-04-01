@@ -41,9 +41,6 @@ const useLogin = (): UseMutationResult<LoginResponse, Error, LoginRequest> => {
       })
       return response.data
     },
-    onSuccess: (data) => {
-      localStorage.setItem('access_token', data.accessToken)
-    },
   })
 }
 

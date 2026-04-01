@@ -16,6 +16,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { useLogin } from '@/services/auth.service'
+import useAuthStore from '@/stores/auth.store'
 
 const loginSchema = z.object({
   username: z.string().min(1, 'El usuario es obligatorio'),
@@ -27,12 +28,14 @@ type LoginFormValues = z.infer<typeof loginSchema>
 const AuthForm = () => {
   const navigate = useNavigate()
   const loginMutation = useLogin()
+  const login = useAuthStore((state) => state.login)
 
   const handleLogin = (data: LoginFormValues) => {
     loginMutation.mutate(
       { username: data.username, password: data.password },
       {
-        onSuccess: () => {
+        onSuccess: (data) => {
+          login(data.accessToken)
           toast.success('Sesión iniciada correctamente')
           void navigate('/dashboard')
         },
